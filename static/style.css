@@ -1,0 +1,191 @@
+/* ================================
+   Section 1: Global Styles
+   ================================ */
+   body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars */
+    box-sizing: border-box;
+}
+
+/* ================================
+   Section 2: Main Container Layout
+   ================================ */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* ================================
+   Section 3: Left Sidebar
+   ================================ */
+.left-sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #1f1f2e;
+    border-right: 1px solid #333;
+    overflow-y: auto;
+}
+
+.left-sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.left-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2a2a40;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.left-sidebar li:hover {
+    background-color: #3b3b50;
+}
+
+/* ================================
+   Section 4: Chat Section
+   ================================ */
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    justify-content: flex-start;
+    padding: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* Smooth scrolling for new messages */
+    background-color: #1e1e2f;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-box div {
+    margin: 10px 0; /* Add spacing between messages */
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.chat-box .user {
+    background-color: #007acc;
+    color: white;
+    align-self: flex-end; /* User messages align to the right */
+    max-width: 70%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.chat-box .ai {
+    background-color: #444;
+    color: white;
+    align-self: flex-start; /* AI messages align to the left */
+    max-width: 70%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #121212;
+    border-top: 1px solid #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+textarea {
+    flex: 1;
+    background-color: #1e1e2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #2a2a40;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007acc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+/* ================================
+   Section 5: Right Sidebar
+   ================================ */
+.right-sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #1f1f2e;
+    border-left: 1px solid #333;
+    overflow-y: auto;
+}
+
+.right-sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2a40;
+    color: white;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #005f99;
+}
