@@ -1,1 +1,13 @@
+# Python cache files
 __pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# VS Code settings
+.vscode/
+
+# API keys and sensitive data
+config/api_keys.py
+settings_local.py
